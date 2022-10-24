@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.post('/signup', async (req, res) => {
   const newUser = new User(req.body);
-  if (!req.body['username'] || !req.body['password']) {
+  if (!req.body['username'] || !req.body['password'] || !req.body['email']) {
     res.status(400).json({
       status: false,
       message: "Invalid Username and password"

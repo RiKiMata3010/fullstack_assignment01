@@ -5,7 +5,7 @@ const router = express.Router();
 router.post('/create', (req, res) => {
     const newEmployee = new Employee(req.body);
     newEmployee.save();
-    res.status(200).json({
+    res.status(201).json({
         message: 'employee created'
     })
 });
@@ -44,7 +44,7 @@ router.put('/:id', async (req, res) => {
     if (employee == null) {
       return res.status(400).json(false)
     } else {
-      return res.status(200).json(employee)
+      return res.status(204).json(employee)
     }
   })
 module.exports = router;
