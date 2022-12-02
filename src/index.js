@@ -33,4 +33,4 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
     .catch(err => console.log('mogno error', err))
 
 
-app.listen(PORT, () => console.log(`app running at PORT ${PORT}`))
+app.listen(4000, () => console.log(`app running at PORT ${PORT}`))
