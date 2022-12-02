@@ -4,6 +4,7 @@ const PORT = process.env.PORT || 4000;
 const mongoose = require("mongoose");
 const sessions = require("express-session");
 
+module.exports = app;
 // session
 const oneDay = 1000 * 60 * 60 * 24;
 app.use(sessions({
