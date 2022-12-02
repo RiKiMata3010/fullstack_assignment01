@@ -14,13 +14,13 @@ app.use(sessions({
     cookie: { maxAge: oneDay }
 }))
 
-const {url, password} = require('./src/credentials')
+const {url, password} = require('./credentials')
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 
-const userRouter = require('./src/routes/user')
-const employeeRouter = require('./src/routes/employee')
+const userRouter = require('./routes/user')
+const employeeRouter = require('./routes/employee')
 
 app.use('/api/user', userRouter)
 app.use('/api/employee', employeeRouter)
