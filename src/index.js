@@ -23,7 +23,9 @@ const employeeRouter = require('./routes/employee')
 
 app.use('/api/user', userRouter)
 app.use('/api/employee', employeeRouter)
-    
+app.get('/',function(req, res){
+    res.status(200).json({message:'Working'})
+})
     
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(res => console.log("mongo connected"))
